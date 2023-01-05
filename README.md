@@ -1,2 +1,2 @@
-# java-assignments
-simple java assignments
+# java tasks
+[simple java tasks](https://habr.com/ru/post/440436/)

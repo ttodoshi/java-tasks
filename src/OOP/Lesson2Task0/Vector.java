@@ -1,4 +1,4 @@
-package OOP.Lesson2Step0;
+package OOP.Lesson2Task0;
 
 public class Vector {
     private final double x;
@@ -10,10 +10,11 @@ public class Vector {
         this.y = y;
         this.z = z;
     }
-    public static Vector[] randomVectors(int n){
+
+    public static Vector[] randomVectors(int n) {
         Vector[] vectors = new Vector[n];
-        for (int i = 0; i < n; i++){
-            vectors[i] = new Vector(Math.random(),Math.random(), Math.random());
+        for (int i = 0; i < n; i++) {
+            vectors[i] = new Vector(Math.random(), Math.random(), Math.random());
         }
         return vectors;
     }
@@ -37,6 +38,7 @@ public class Vector {
     public Vector add(Vector vector) {
         return new Vector(this.x + vector.x, this.y + vector.y, this.z + vector.z);
     }
+
     public Vector subtract(Vector vector) {
         return new Vector(this.x - vector.x, this.y - vector.y, this.z - vector.z);
     }

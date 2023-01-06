@@ -3,12 +3,12 @@ package Base;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Lesson1Step1 {
+public class Lesson1Task1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int arrLength = sc.nextInt();
         double[] array = new double[arrLength];
-        for (int i = 0; i < arrLength; i++){
+        for (int i = 0; i < arrLength; i++) {
             array[i] = Math.random();
         }
         bubbleSort(array);

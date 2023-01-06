@@ -1,4 +1,4 @@
-package OOP.Lesson2Step2;
+package OOP.Lesson2Task2;
 
 public class MyLinkedListElement {
 }

@@ -1,22 +1,23 @@
-package OOP.Lesson2Step1;
+package OOP.Lesson2Task1;
 
 import java.util.Random;
 
 public class WeightArrays {
     private final int[] valuesByWeightArray;
-    public WeightArrays(int[] valuesArray, int[] weightsArray){
+    public WeightArrays(int[] valuesArray, int[] weightsArray) {
         int valuesByWeightArrayLength = 0;
-        for (int weight: weightsArray){
+        for (int weight : weightsArray) {
             valuesByWeightArrayLength += weight;
         }
         this.valuesByWeightArray = new int[valuesByWeightArrayLength];
         for (int i = 0; i < weightsArray.length; i++) {
-            for (int j = 0; j < weightsArray[i]; j++){
+            for (int j = 0; j < weightsArray[i]; j++) {
                 this.valuesByWeightArray[--valuesByWeightArrayLength] = valuesArray[i];
             }
         }
     }
-    public int returnRandomValue(){
+
+    public int returnRandomValue() {
         return valuesByWeightArray[new Random().nextInt(this.valuesByWeightArray.length)];
     }
 }

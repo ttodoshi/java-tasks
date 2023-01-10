@@ -1,11 +1,13 @@
 package Recursion.Lesson3Task2;
 
 public class BinarySearchTree {
-    Node head;
-    Node[] nodes;
+    private final Node head;
+    private final Node[] nodes;
 
-    public BinarySearchTree(int nodes) {
-        this.nodes = new Node[nodes];
+    public BinarySearchTree(int numOfNodes, long headNode) {
+        this.nodes = new Node[numOfNodes];
+        this.head = new Node(headNode);
+        this.nodes[Node.k] = this.head;
     }
 
     public void add(long value) {
@@ -13,24 +15,16 @@ public class BinarySearchTree {
     }
 
     private void add(Node head, long value) {
-        if (Node.k == 0) {
-            this.head = new Node(value);
-            nodes[Node.k - 1] = this.head;
-        } else if (head == null) {
-            head = new Node(value);
-            nodes[Node.k - 1] = head;
+        if (head.left == null && head.compareTo(value)) {
+            head.left = new Node(value);
+            nodes[Node.k - 1] = head.left;
+        } else if (head.right == null && !head.compareTo(value)) {
+            head.right = new Node(value);
+            nodes[Node.k - 1] = head.right;
+        } else if (head.compareTo(value)) {
+            add(head.left, value);
         } else {
-            if (head.left == null && head.compareTo(value)) {
-                head.left = new Node(value);
-                nodes[Node.k - 1] = head.left;
-            } else if (head.right == null && !head.compareTo(value)) {
-                head.right = new Node(value);
-                nodes[Node.k - 1] = head.right;
-            } else if (head.compareTo(value)) {
-                add(head.left, value);
-            } else {
-                add(head.right, value);
-            }
+            add(head.right, value);
         }
     }
 

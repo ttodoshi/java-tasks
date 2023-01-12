@@ -1,11 +1,20 @@
 package Inheritance;
 
+import java.util.function.Function;
+
 public class Lesson4 {
     public static void main(String[] args) {
         Box box = new Box(50);
         System.out.println(box.add(new Cylinder(2, 3)));
         System.out.println(box.add(new Pyramid(5, 5)));
         System.out.println(box.add(new Pyramid(5, 5)));
+        Shape shape = new RotationFigure(new Function<Double, Double>() {
+            @Override
+            public Double apply(Double x) {
+                return Math.cos(x);
+            }
+        }, 0, 10);
+        System.out.println(shape.getVolume());
     }
 }
 
@@ -99,4 +108,29 @@ class Box implements Shape {
     public double getRemainingVolume() {
         return remainingVolume;
     }
+}
+
+class RotationFigure extends SolidOfRevolution {
+    Function<Double, Double> func;
+    double a;
+    double b;
+
+    public RotationFigure(Function<Double, Double> func, double a, double b) {
+        super(b - a);
+        this.func = func;
+        this.a = a;
+        this.b = b;
+    }
+
+    @Override
+    public double getVolume() {
+        double result = 0;
+        int n = 30;
+        double h = (b-a) / n;
+        for(int i = 0; i < n; i++) {
+            result += Math.pow(func.apply(a+h*i/n), 2);
+        }
+        return Math.PI * result;
+    }
+
 }

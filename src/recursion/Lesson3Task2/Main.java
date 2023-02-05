@@ -2,13 +2,15 @@ package recursion.Lesson3Task2;
 
 public class Main {
     public static void main(String[] args) {
-        BinarySearchTree tree = new BinarySearchTree(5, 10);
-        tree.add(5);
-        tree.add(15);
-        tree.add(13);
-        tree.add(7);
-        System.out.println(tree.get(5));
-        System.out.println(tree.get(13));
-        System.out.println(tree.get(7));
+        BinarySearchTree binarySearchTree = new BinarySearchTree();
+        binarySearchTree.add(50);
+        binarySearchTree.add(25);
+        binarySearchTree.add(75);
+        binarySearchTree.add(80);
+        binarySearchTree.add(70);
+        System.out.println(binarySearchTree.get(50).left);
+        System.out.println(binarySearchTree.get(50).right);
+        System.out.println(binarySearchTree.get(75).left);
+        System.out.println(binarySearchTree.get(75).right);
     }
 }

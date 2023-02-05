@@ -4,33 +4,24 @@ public class BinarySearchTree {
     private Node root;
 
     public void add(long value) {
-        add(this.root, value);
-    }
-
-    private void add(Node currentNode, long value) {
         Node newNode = new Node(value);
-        if (root == null) {
+        if (root == null)
             root = newNode;
-        }
         else {
-//            Node parent = currentNode;
+            Node currentNode = this.root;
+            Node parent;
             while (currentNode != null) {
-                if (currentNode.isLessThan(value) && currentNode.right != null) {
+                parent = currentNode;
+                if (currentNode.isLessThan(value)) {
                     currentNode = currentNode.right;
-                }
-                else if (currentNode.isLessThan(value) && currentNode.right == null) {
-                    currentNode.right = newNode;
-                    return;
-                }
-                else if (!currentNode.isLessThan(value) && currentNode.left != null) {
+                    if (currentNode == null)
+                        parent.right = newNode;
+                } else {
                     currentNode = currentNode.left;
-                }
-                else {
-                    currentNode.left = newNode;
-                    return;
+                    if (currentNode == null)
+                        parent.left = newNode;
                 }
             }
-
         }
     }
 
@@ -46,19 +37,16 @@ public class BinarySearchTree {
         } else {
             if (currentNode.isLessThan(value)) {
                 return get(currentNode.right, value);
-            }
-            else {
+            } else {
                 return get(currentNode.left, value);
             }
         }
     }
 
-    static class Node {
+    private static class Node {
         final long data;
         Node left;
         Node right;
-
-//        Node parent;
 
         public Node(long data) {
             this.data = data;

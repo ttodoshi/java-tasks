@@ -1,4 +1,4 @@
-package AbstractClassesAndIntefaces;
+package abstract_classes_and_intefaces;
 
 public class Lesson6Task0 {
     public static void main(String[] args) {

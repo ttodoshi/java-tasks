@@ -1,4 +1,4 @@
-package Strings;
+package strings;
 
 public class Lesson5Task0 {
     public static void main(String[] args) {

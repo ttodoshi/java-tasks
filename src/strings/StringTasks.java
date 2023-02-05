@@ -1,6 +1,4 @@
-package Strings;
-
-import java.util.Locale;
+package strings;
 
 public class StringTasks {
     public static void main(String[] args) {

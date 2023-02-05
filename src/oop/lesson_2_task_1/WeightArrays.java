@@ -1,4 +1,4 @@
-package OOP.Lesson2Task1;
+package oop.lesson_2_task_1;
 
 import java.util.Random;
 

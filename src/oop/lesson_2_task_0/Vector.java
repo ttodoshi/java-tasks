@@ -1,4 +1,4 @@
-package OOP.Lesson2Task0;
+package oop.lesson_2_task_0;
 
 public class Vector {
     private final double x;

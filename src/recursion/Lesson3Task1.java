@@ -1,4 +1,4 @@
-package Recursion;
+package recursion;
 
 public class Lesson3Task1 {
     public static void main(String[] args) {

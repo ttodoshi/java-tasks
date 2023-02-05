@@ -1,4 +1,4 @@
-package Recursion.Lesson3Task2;
+package recursion.Lesson3Task2;
 
 public class BinarySearchTree {
     private final Node head;

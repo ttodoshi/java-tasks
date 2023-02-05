@@ -1,7 +1,4 @@
-package Recursion;
-
-import java.util.Arrays;
-import java.util.Date;
+package recursion;
 
 public class Lesson3Task0 {
     public static void main(String[] args) {

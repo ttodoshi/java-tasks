@@ -1,4 +1,4 @@
-package Inheritance;
+package inheritance;
 
 import java.util.function.Function;
 

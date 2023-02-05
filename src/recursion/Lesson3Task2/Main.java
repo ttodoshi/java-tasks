@@ -8,9 +8,7 @@ public class Main {
         binarySearchTree.add(75);
         binarySearchTree.add(80);
         binarySearchTree.add(70);
-        System.out.println(binarySearchTree.get(50).left);
-        System.out.println(binarySearchTree.get(50).right);
-        System.out.println(binarySearchTree.get(75).left);
-        System.out.println(binarySearchTree.get(75).right);
+        System.out.println(binarySearchTree.get(50));
+        System.out.println(binarySearchTree.get(70));
     }
 }
